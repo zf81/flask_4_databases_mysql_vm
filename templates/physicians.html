@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<section class="mb-6 table-container">
+    <div class="table">
+        <h2 class="text-xl mb-2">Physicians Table</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Physician ID</th>
+                    <th class="px-4 py-2">Physician First and Last Name</th>
+                    <th class="px-4 py-2">Physician Specialty</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for physicians in data1 %}
+                <tr>
+                    <td class="border px-4 py-2">{{ physicians.physician_id }}</td>
+                    <td class="border px-4 py-2">{{ physicians.physician_name }}</td>
+                    <td class="border px-4 py-2">{{ physicians.phys_specialty }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
