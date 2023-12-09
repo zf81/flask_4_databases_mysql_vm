@@ -42,7 +42,7 @@ def patients():
         # Fetch all rows of data
         patientdata = result1.fetchall()
 
-    return render_template('patients.html', data1=patientdata)
+    return render_template('patients.html', data2=patientdata)
 
 @app.route('/physicians')
 def physicians():
@@ -54,9 +54,9 @@ def physicians():
         result2 = connection.execute(query2)
 
         # Fetch all rows of data
-        physicisndata = result2.fetchall()
+        physiciandata = result2.fetchall()
 
-    return render_template('physicians.html', data2=physiciandata)
+    return render_template('physicians.html', data1=physiciandata)
 
 @app.route('/patientlabs')
 def patientlabs():

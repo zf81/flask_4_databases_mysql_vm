@@ -5,7 +5,7 @@ USE stonybrooknyhospital;
 CREATE TABLE physicians (
     physician_id INT PRIMARY KEY AUTO_INCREMENT,
     physician_name VARCHAR(50) NOT NULL,
-    phys_specialty VARCHAR(50) DEFAULT 'Hematology Oncology'
+    phys_specialty VARCHAR(50) NOT NULL,
 );
 
 CREATE TABLE patients (
