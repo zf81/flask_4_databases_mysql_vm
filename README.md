@@ -78,9 +78,20 @@ INSERT INTO patientlabs (patient_id, physician_id, lab_name, lab_date, lab_resul
 
  - Click on **Database** and choose **Reverse Engineer** to create the ERD diagram.
 
- - ![image](https://github.com/zf81/flask_4_databases_mysql_vm/blob/main/Screenshots/ERD.png?raw=true)
+![image](https://github.com/zf81/flask_4_databases_mysql_vm/blob/main/Screenshots/ERD.png?raw=true)
 
- - 
+#### Integrate with Flask:
+ - For this portion of the assignment, I used my previous HTML templates to create the following HTML files. I changed some HTML files to patients.html, base.html, and physicians.html, and patientlabs.html. 
+ - You can find the screenshots for the application deployment under Screenshots. 
+ - You will also need to add a ```.env``` file as well as a ```.gitignore``` file. Make sure that the ```.gitignore``` file contains the ```.env``` file, so that your username and password for your database are protected. Here is a template of my ```.env``` file:
+   
+```
+DB_HOST=IP address of your virtual machine
+DB_DATABASE=name of database
+DB_USERNAME=username for database
+DB_PASSWORD=password for database
 
-
+``` 
+#### Errors:
+- Early in the assignment, I wasn't able to execute MySQL after typing in ```sudo mysql```. Searching online, I read that this can occur if the VM does not have enough space. I checked the configurations of the virtual machine I had created on Azure and saw that I had accidentally chosen a size of 0.5 GB. I re-created the VM with the correct size, Standard B1ms (1 vcpu, 2 GiB memory) and resolved this issue. After integrating with Flask, I also noticed that under the Physicians tab, the physicians data that I populated the table with repeats itself after the 3rd physician. You can see this in the Physicians screenshot. 
 
