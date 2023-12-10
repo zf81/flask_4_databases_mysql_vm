@@ -78,7 +78,9 @@ INSERT INTO patientlabs (patient_id, physician_id, lab_name, lab_date, lab_resul
 
  - Click on **Database** and choose **Reverse Engineer** to create the ERD diagram.
 
- - ![image]()
+ - ![image](https://github.com/zf81/flask_4_databases_mysql_vm/blob/main/Screenshots/ERD.png?raw=true)
+
+ - 
 
 
 
